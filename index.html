@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refraction Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Refraction Simulation</h1>
+        <div class="controls">
+            <label>
+                Material 1:
+                <select id="material1">
+                    <option value="1.0">Air (n = 1.000)</option>
+                    <option value="1.33">Water (n = 1.330)</option>
+                    <option value="1.5">Glass (n = 1.500)</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <input type="number" id="customN1" step="0.01" value="1.0" min="1" max="3" disabled>
+            </label>
+            <label>
+                Material 2:
+                <select id="material2">
+                    <option value="1.0">Air (n = 1.000)</option>
+                    <option value="1.33">Water (n = 1.330)</option>
+                    <option value="1.5">Glass (n = 1.500)</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <input type="number" id="customN2" step="0.01" value="1.5" min="1" max="3" disabled>
+            </label>
+            <label>
+                Laser Beam Color:
+                <input type="color" id="laserColor" value="#ff0000">
+            </label>
+            <label>
+                <input type="checkbox" id="showNormals" checked> Show Normals
+            </label>
+            <label>
+                <input type="checkbox" id="showAngles" checked> Show Angles
+            </label>
+        </div>
+        <canvas id="simulationCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
